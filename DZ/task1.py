@@ -14,6 +14,8 @@ running (запуск).
 """
 
 from time import sleep
+
+
 class TrafficLight:
 
     def __init__(self, color, times):
