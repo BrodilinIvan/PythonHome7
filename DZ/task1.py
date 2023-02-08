@@ -19,11 +19,11 @@ from time import sleep
 class TrafficLight:
 
     def __init__(self, color, times):
-        self._color = color
+        self.__color = color
         self.times = times
 
     def running(self):
-        print(f'Горит {self._color} свет')
+        print(f'Горит {self.__color} свет')
         sleep(self.times)
 
 
