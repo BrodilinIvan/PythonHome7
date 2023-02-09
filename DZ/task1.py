@@ -18,19 +18,16 @@ from time import sleep
 
 class TrafficLight:
 
-    def __init__(self, color, times):
-        self.__color = color
-        self.times = times
+    def __init__(self):
+        self.__color = ['Красный', 'Желтый', 'Зеленый']
+        self.times = [7, 2, 4]
 
     def running(self):
-        print(f'Горит {self.__color} свет')
-        sleep(self.times)
+        mode_dict = dict(zip(self.__color, self.times))
+        for key, value in mode_dict.items():
+            print(f'Горит {key} свет')
+            sleep(value)
 
 
-red = TrafficLight('Красный', 7)
-yellow = TrafficLight('Желтый', 2)
-green = TrafficLight('Зеленый', 4)
-
-red.running()
-yellow.running()
-green.running()
+run = TrafficLight()
+run.running()
